@@ -1,5 +1,5 @@
 import re
-
+import getpass
 
 def check_password_strength(password):
     strength_score = 0
@@ -40,7 +40,8 @@ def check_password_strength(password):
 
 def main():
     print("🔐 Password Strength Checker")
-    password = input("Enter your password: ")
+
+    password = getpass.getpass("Enter your password: ")
 
     score, feedback = check_password_strength(password)
 
